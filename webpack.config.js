@@ -1,4 +1,4 @@
-import path from 'path';
+const path = require('path');
 
 module.exports = {
     mode: 'development',
@@ -6,7 +6,7 @@ module.exports = {
         polyfill: 'babel-polyfill',
         app: './js/app.js'
     },
-    context: path.resolve(_dirname, 'src'),
+    context: path.resolve(__dirname, 'src'),
     module: {
         rules: [
             {
@@ -22,7 +22,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: [name].js
+        filename: '[name].js'
     },
     devServer: {
         publicPath: '/',
