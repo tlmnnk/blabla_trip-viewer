@@ -1,6 +1,9 @@
-import api from './services/apiService';
+import './plugins';
+import trips from './store/trips';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const myTrips = api.getTrips();
-    console.log(myTrips);
+  
+    async function onFormSubmit() {
+        trips.init(params);
+    }
 });

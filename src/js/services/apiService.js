@@ -4,21 +4,12 @@ import config from '../config/apiConfig';
 class Api {
     constructor(config) {
         this.apiKey = config.apiKey;
-        this.url = config.url;
-        //params for testing
-        this.params = {
-            fn: 'Rostov-na-Donu',
-            tn: 'Moscow',
-            locale: 'ru_RU',
-            cur: 'RUB'
-
-        };
+        this.url = config.apiUrl; 
     }
-
-    async getTrips() {
+    async getTrips(params) {
         try {
-            const response = await axios.get(`${this.url}api/v2/trips`, {
-                params: this.params
+            const response = await axios.get(`${this.apiUrl}api/v2/trips`, {
+                params: params
             });
             return response;
         } catch (err) {
@@ -26,8 +17,6 @@ class Api {
             Promise.reject(err);
         }
     }
-
-
 }
 
 const api = new Api(config);
