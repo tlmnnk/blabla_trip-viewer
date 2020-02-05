@@ -1,5 +1,8 @@
 const path = require('path');
+const precss = require('precss');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
@@ -18,10 +21,33 @@ module.exports = {
                     },
                 },
                 test: /\.js$/,
-            }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                  {
+                    loader: MiniCssExtractPlugin.loader,
+                  },
+                  {
+                    loader: 'css-loader',
+        
+                    options: {
+                      importLoaders: 1,
+                      sourceMap: true,
+                    },
+                  },
+                  {
+                    loader: 'postcss-loader',
+                    options: {
+                      plugins: () => [precss, autoprefixer],
+                    },
+                  },
+                ],
+              },
         ]
     },
     plugins: [
+        new MiniCssExtractPlugin({filename: './style.css'}),
         new HtmlWebpackPlugin({
           template: 'index.html',
         }),
