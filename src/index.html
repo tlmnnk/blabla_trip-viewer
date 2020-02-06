@@ -7,15 +7,62 @@
     <title>Document</title>
 </head>
 <body>
+  
     <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-          </ul>
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="brand-logo">BlaBla_trip-viewer</a>
         </div>
-      </nav>
+      </div>
+    </nav>
+  
+    <div class="form-section">
+      <div class="container">
+        <form name="locationControls">
+        <div class="row">
+          <div class="col s4 offset-s4">
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" id="autocomplete-origin" class="autocomplete">
+                <label for="autocomplete-origin">Откуда</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4 offset-s4">
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" id="autocomplete-dest" class="autocomplete">
+                <label for="autocomplete-dest">Куда</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s2 offset-s4">
+            <div class="input-field">
+              <input 
+                type="text"
+                class="datepicker"
+                id='datepicker-depart'>
+                <label for="datepicker-depart">Дата отправления</label>
+            </div>
+          </div>
+          <div class="col s2">
+            <div class="input-field">
+              <input 
+                type="text"
+                class="timepicker"
+                id='timepicker-depart'>
+                <label for="timepicker-depart">Время отправления</label>
+            </div>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+    
+   
 </body>
 </html>

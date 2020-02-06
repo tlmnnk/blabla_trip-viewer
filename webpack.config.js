@@ -64,6 +64,6 @@ module.exports = {
         historyApiFallback: true,
         noInfo: false,
         stats: 'minimal',
-        hot: true,
+        
       },
 };
