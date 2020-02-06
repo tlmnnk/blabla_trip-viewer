@@ -1,5 +1,5 @@
 import axios from 'axios';
-import config from '../config/apiConfig';
+import {config, hhAreasConfig} from '../config/apiConfig';
 
 class Api {
     constructor(config) {
