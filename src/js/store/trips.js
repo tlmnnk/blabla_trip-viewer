@@ -41,7 +41,7 @@ class Trips {
    }
     // 
     getCitiesAutocompleteList(areas) {
-        let citiesTemp = getSerializedCities(areas); 
+        let citiesTemp = this.getSerializedCities(areas); 
         let citiesSorted = Object.entries(citiesTemp).sort((a,b) => a - b);
 
         citiesSorted = this.addMoscowAndPeterburg(citiesSorted);
