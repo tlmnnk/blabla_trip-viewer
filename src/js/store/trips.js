@@ -10,7 +10,6 @@ class Trips {
         const areas = await this.api.getAreas();
         const russianAreas = this.getRussianAreas(areas).areas;
         this.citiesAutocompleteList = this.getCitiesAutocompleteList(russianAreas);
-
     }
     getRussianAreas(countries) {
         return countries.filter(country => country.id == '113')[0];
