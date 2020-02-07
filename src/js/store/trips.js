@@ -27,7 +27,7 @@ class Trips {
         array.unshift(['1', 'Москва']);
         return array;
     }
-   getSerializedCities(areas) {
+    getSerializedCities(areas) {
     return areas.reduce((acc, item)=>{
         let cities = {};
         const region = item.name;
@@ -38,8 +38,8 @@ class Trips {
         Object.assign(acc, cities);
         return acc;
     }, {});
-   }
-    // 
+    }
+ 
     getCitiesAutocompleteList(areas) {
         let citiesTemp = this.getSerializedCities(areas); 
         let citiesSorted = Object.entries(citiesTemp).sort((a,b) => a - b);
@@ -50,6 +50,10 @@ class Trips {
             acc[item[1]] = null;
             return acc;
         }, {});
+    }
+
+    getTrips(params) {
+        return this.api.getTrips(params);
     }
 }
 
