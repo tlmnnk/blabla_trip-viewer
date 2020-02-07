@@ -4,7 +4,7 @@ class FormUI {
     constructor(autocompleteInstance) {
         this._form = document.forms['tripsControls'];
         this.origin = document.getElementById('autocomplete-origin');
-        this.destination = document.getElementById('autocomplete-destination');
+        this.destination = document.getElementById('autocomplete-dest');
         this.originAutocomplete = autocompleteInstance(this.origin);
         this.destinationAutocomplete = autocompleteInstance(this.destination);
     }
@@ -28,3 +28,5 @@ class FormUI {
 }
 
 const formUI = new FormUI(getAutocompleteInstance);
+
+export default formUI;
