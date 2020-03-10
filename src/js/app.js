@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function onFormSubmit() {
-        trips.init(params);
+       const origin = formUI.originValue;
+       const destination = formUI.destinationValue;
+       
     }
 });
