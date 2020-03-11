@@ -23,7 +23,7 @@ module.exports = {
                 test: /\.js$/,
             },
             {
-                test: /\.css$/,
+                test:/\.(s*)css$/,
                 use: [
                   {
                     loader: MiniCssExtractPlugin.loader,
@@ -42,6 +42,7 @@ module.exports = {
                       plugins: () => [precss, autoprefixer],
                     },
                   },
+                  'sass-loader'
                 ],
               },
         ]

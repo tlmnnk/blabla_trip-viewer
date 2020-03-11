@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
+
 <body>
-  
-    <nav>
-      <div class="nav-wrapper">
-        <div class="container">
-          <a href="#" class="brand-logo">BlaBla_trip-viewer</a>
-        </div>
-      </div>
-    </nav>
-  
-    <div class="form-section">
+
+  <nav>
+    <div class="nav-wrapper">
       <div class="container">
-        <form name="tripsControls">
-        <div class="row">
-          <div class="col s4 offset-s4">
-            <div class="row">
-              <div class="input-field col s12">
-                <input type="text" id="autocomplete-origin" class="autocomplete" autocomplete="off">
-                <label for="autocomplete-origin">Откуда</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s4 offset-s4">
-            <div class="row">
-              <div class="input-field col s12">
-                <input type="text" id="autocomplete-dest" class="autocomplete" autocomplete="off">
-                <label for="autocomplete-dest">Куда</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s2 offset-s4">
-            <div class="input-field">
-              <input 
-                type="text"
-                class="datepicker"
-                id='datepicker-depart'>
-                <label for="datepicker-depart">Дата отправления</label>
-            </div>
-          </div>
-          <div class="col s2">
-            <div class="input-field">
-              <input 
-                type="text"
-                class="timepicker"
-                id='timepicker-depart'>
-                <label for="timepicker-depart">Время отправления</label>
-            </div>
-          </div>
-        </div>
-      </form>
+        <a href="#" class="brand-logo">BlaBla_trip-viewer</a>
       </div>
     </div>
-    
-   
+  </nav>
+
+  <div class="form-section">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col m6 mx-auto">
+          <div class="card">
+            <form name="tripsControls">
+              <div class="card-content">
+                <div class="input-field">
+                  <input type="text" id="autocomplete-origin" class="autocomplete" autocomplete="off">
+                  <label for="autocomplete-origin">Откуда</label>
+                </div>
+                <div class="input-field">
+                  <input type="text" id="autocomplete-dest" class="autocomplete" autocomplete="off">
+                  <label for="autocomplete-dest">Куда</label>
+                </div>
+                <div class="input-field">
+                  <input type="text" class="datepicker" id='datepicker-depart'>
+                  <label for="datepicker-depart">Дата отправления</label>
+                </div>
+                <div class="input-field">
+                  <input type="text" class="timepicker" id='timepicker-depart'>
+                  <label for="timepicker-depart">Время отправления</label>
+                </div>
+              </div>
+              <div class="card-action d-flex">
+                <button class="btn waves-effect waves-light purple darken-3" type="submit" name="action">
+                  Найти попутчиков
+                </button>
+                <button class="btn waves-effect waves-light pink darken-3" type="submit" name="action">
+                  Сброс
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 </body>
+
 </html>
