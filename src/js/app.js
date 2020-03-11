@@ -13,8 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function onFormSubmit() {
-       const origin = formUI.originValue;
-       const destination = formUI.destinationValue;
+       
        
     }
 });

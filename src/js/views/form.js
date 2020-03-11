@@ -1,16 +1,16 @@
-import { getAutocompleteInstance } from '../plugins';
+import { getAutocompleteInstance, getDatepickerInstance, getTimepickerInstance } from '../plugins';
 
 class FormUI {
-    constructor(autocompleteInstance) {
+    constructor(autocompleteInstance, datepickerInstance, timepickerInstance) {
         this._form = document.forms['tripsControls'];
         this.origin = document.getElementById('autocomplete-origin');
         this.destination = document.getElementById('autocomplete-dest');
-        this.depart_date = document.getElementById('datepicker-depart');
-        this.depart_time = document.getElementById('timepicker-depart');
+        this.departDate = document.getElementById('datepicker-depart');
+        this.departTime = document.getElementById('timepicker-depart');
         this.originAutocomplete = autocompleteInstance(this.origin);
         this.destinationAutocomplete = autocompleteInstance(this.destination);
-        this.departDatepicker = datepickerInstance(this.depart_date);
-        this.departTimepicker = datepickerInstance(this.depart_time);
+        this.departDatepicker = datepickerInstance(this.departDate);
+        this.departTimepicker = timepickerInstance(this.departTime);
     }
 
     get form() {
@@ -37,6 +37,6 @@ class FormUI {
     }
 }
 
-const formUI = new FormUI(getAutocompleteInstance);
+const formUI = new FormUI(getAutocompleteInstance, getDatepickerInstance, getTimepickerInstance);
 
 export default formUI;
