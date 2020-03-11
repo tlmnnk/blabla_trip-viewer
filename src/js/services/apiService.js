@@ -4,12 +4,12 @@ import {config, hhAreasConfig} from '../config/apiConfig';
 class Api {
     constructor(config) {
         this.apiKey = config.apiKey;
-        this.url = config.apiUrl;
+        this.apiUrl = config.apiUrl;
         this.areasUrl = hhAreasConfig.apiUrl;
     }
     async getTrips(params) {
         try {
-            const response = await axios.get(`${this.apiUrl}api/v2/trips`, {
+            const response = await axios.get(`${this.apiUrl}api/v2/trips?key=${this.apiKey}`, {
                 params: params
             });
             return response;

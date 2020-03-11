@@ -28,7 +28,7 @@ class FormUI {
         return this.departDatepicker.toString();
     }
     get departTimeValue() {
-        return this.departTimepicker.toString();
+        return this.departTimepicker.time;
     }
 
     setAutocompleteData(data) {
